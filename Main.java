@@ -1,25 +1,20 @@
 package com.ravi;
 
 public class Main {
-    public static void fibonacci(int a,int b,int n){
-        if(n == 0)
-        {
-            return;
+    public static int fuct(int n)
+    {
+        if(n==1){
+            return 1;
+
         }
-
-
-        int c= a+b;
-        System.out.println(c);
-        fibonacci(b,c,n-1);
+        int a= fuct(n-1);
+        a =  a*n;
+        return a;
     }
 
     public static void main(String[] args) {
-	// write your code here
-        int a= 0;
-        int b = 1;
-        int n = 7;
+	int n = 5;
+    int   a=fuct(n);
         System.out.println(a);
-        System.out.println(b);
-        fibonacci(a,b,n-2);
     }
 }
